@@ -7,11 +7,11 @@ phases:
 
     prebuild:
        commands:
-       chmod +x install-terraform.sh configure-named-profile.sh apply-terraform.sh
+        - chmod +x install-terraform.sh configure-named-profile.sh apply-terraform.sh
         - ./install-terraform.sh
 
         - ./configure-named-profile.sh
 
-       built:
+    built:
         commands:
-       - ./apply-terraform.sh
+         - ./apply-terraform.sh
