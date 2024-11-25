@@ -10,8 +10,8 @@ phases:
        chmod +x install-terraform.sh configure-named-profile.sh apply-terraform.sh
         - ./install-terraform.sh
 
-        -.configure-named-profile.sh
+        - ./configure-named-profile.sh
 
        built:
         commands:
-       -.apply-terraform.sh
+       - ./apply-terraform.sh
