@@ -1,0 +1,17 @@
+version: 0.2
+
+phases: 
+    install:
+        runtime version:
+            phython: 3.x
+
+    prebuild:
+       commands:
+       chmod +x install-terraform.sh configure-named-profile.sh apply-terraform.sh
+        - ./install-terraform.sh
+
+        -.configure-named-profile.sh
+
+       built:
+        commands:
+       -.apply-terraform.sh
